@@ -1,11 +1,15 @@
 // Create a variable with the options that the user has
 const options = ['rock', 'paper', 'scissors'];
-// to select one option we need the a random index based on the lenght of the array
-let indexNumber = Math.floor(Math.random() * options.length);
-let userHand = options[indexNumber]
 
+const getUserHand = (option) => {
+// Turn the option to case insensitive
+  const userHand = option.toLowerCase();
+/* If the userHand is included in the options array return if not give a message to the user */
+  if (options.includes(userHand)) {
+    return userHand
+  } else {
+    return 'Please enter a valid option'
+  }
+};
 
-
-
-
-console.log(userHand);
+getUserHand('rock');
