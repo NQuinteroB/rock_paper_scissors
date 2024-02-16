@@ -12,4 +12,9 @@ const getUserHand = (option) => {
   }
 };
 
+function getComputerHand() {
+  let randomIndex = Math.floor(Math.random() * options.length);
+  return options[randomIndex];
+}
 
+console.log(getComputerHand());
