@@ -12,4 +12,4 @@ const getUserHand = (option) => {
   }
 };
 
-getUserHand('rock');
+
