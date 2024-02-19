@@ -17,4 +17,18 @@ function getComputerHand() {
   return options[randomIndex];
 }
 
-console.log(getComputerHand());
+
+function determineWinner(userHand, ComputerHand) {
+  if (userHand === ComputerHand) {
+    return "It's a tie";
+  }
+  if (
+    (userHand === 'rock' && ComputerHand === 'scissors') ||
+    (userHand === 'paper' && ComputerHand === 'rock') ||
+    (userHand === 'scissors' && ComputerHand === 'paper' )
+    ) {
+    return 'user won';
+  } else {
+    return 'computer won';
+  }
+};
